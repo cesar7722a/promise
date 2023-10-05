@@ -66,6 +66,10 @@ li{
   height: 20rem;
   border-radius: 8px;
   margin-bottom: 1rem;
+  transition: .5s;
+}
+li:hover{
+  transform: scale(1.1);
 }
 section{
   display: flex;

@@ -4,11 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/pageCriarConta.css">
+  <link rel="stylesheet" href="fonts/css/all.css">
   <title>Criar Conta</title>
 </head>
 <body>
   <div class="card">
-    <button class="btn-voltar">voltar</button>
+    <button class="btn-voltar"><i class="fas fa-arrow-left"></i></button>
     <div class="container">
       <h1>Preenche Todos os Campos Para Ter uma Conta</h1>
       <form action="">
@@ -20,13 +21,13 @@
           Email<br>
           <input type="email" placeholder="email@gmail.com" id="inputEmail">
         </label>
-        <label for="">
+        <label for="inputPassword">
           Password<br>
-          <input type="password" placeholder="Digete uma password forte">
+          <input type="password" placeholder="Digete uma password forte" id="inputPassword">
         </label>
       </form>
       <div class="btn-criar-cancel">
-        <button class="container-btn-criar-cancel">Sign Up</button>
+        <button class="container-btn-criar-cancel " onclick="adicionarElemento()">Sign Up</button>
         <button class="container-btn-criar-cancel btn-cancel">Cancel</button>
       </div>
     </div>

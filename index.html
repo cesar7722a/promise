@@ -15,7 +15,7 @@
       <input type="text" placeholder="Digite o nome para pesquisar" id="inputPesquisa">
     </div>
     <div class="sign-in_sign-up">
-      <button>Sign Up</button>
+      <button class="header-btn-sign-up" onclick="mostraMoodal ()">Sign Up</button>
       <button>Sign In</button>
     </div>
   </header>
@@ -25,6 +25,27 @@
       </div>
     </div>
   </main>
+  <!-- modal sign up -->
+  <div class="modal">
+    <div class="cardModal">
+      <h1>Insira o Email e Password Para Ver Mais Informações.</h1>
+      <form action="">
+        <label for="inputEmail">
+          Email<br>
+          <input type="email" placeholder="email@gmail.com" id="inputEmail">
+        </label>
+        <label for="inputPassword">
+          Password<br>
+          <input type="password" placeholder="Digete a password" id="inputPassword">
+        </label>
+      </form>
+      <div class="container-bt-sign-up-cancel">
+        <button class="btn-sign-up">Sign Up</button>
+        <button class="btn-cancel" onclick="Cancel()">Cancelar</button>
+      </div>
+      <a href="#">Criar uma conta</a>
+    </div>
+  </div>
 </body>
 <script src="js/index.js"></script>
 </html>

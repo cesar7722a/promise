@@ -24,6 +24,10 @@ function renderElmento(){
     let sectionId = ce("section");
     sectionNome.innerHTML=`Nome: <h1>${element.nome}</h1>`;
     sectionId.innerHTML=`Id: <h1>${element.id}</h1>`
+
+    li.addEventListener(`click`, ()=>{
+      mostraMoodal ()
+    })
     li.appendChild(img)
     li.appendChild(sectionId)
     li.appendChild(sectionNome);
@@ -44,6 +48,26 @@ renderElmento()
 
   renderElmento()
 });
+
+// Modal
+
+function mostraMoodal () {
+  document.querySelector('.modal').style.opacity = 0;
+  document.querySelector(`.modal`).style.display = "flex";
+  setTimeout(() => {
+    document.querySelector('.modal').style.opacity = 1;
+  }, 200);
+}
+
+function Cancel() {
+  document.querySelector('.modal').style.opacity = 1;
+  setTimeout(() => {
+    document.querySelector(`.modal`).style.display = "none";
+    document.querySelector('.modal').style.opacity = 0;
+  }, 200);
+  document.querySelector(`#inputEmail`).value = "";
+  document.querySelector(`#inputPassword`).value = "";
+};
 
 // var minhaPronise = function() {
 //   return new Promise(function(resolve, reject){

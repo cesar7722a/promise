@@ -71,6 +71,9 @@ function Cancel() {
   document.querySelector(`#inputPassword`).value = "";
 };
 
+function criarConta () {
+  window.location.replace("pageCriarConta.html");
+}
 // var minhaPronise = function() {
 //   return new Promise(function(resolve, reject){
 //     var xhr = new XMLHttpRequest();

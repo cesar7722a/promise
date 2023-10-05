@@ -40,10 +40,12 @@ renderElmento()
   inputPesquisa.addEventListener(`keyup`, (event) => {
     const search = event.target.value;
     const retorneArray = array.filter((element) => element.nome.toLowerCase().includes(search.toLowerCase()));
-    if (search == "") {
+    if (search == "" || search.trim()=="") {
         array2 = array;
     } else {
         array2 = retorneArray;
+      //  let tratarErro = document.querySelector(`.card`);
+      //  tratarErro.innerHTML=`<h1 id ="tratarErro">Nome Não Encontrado!</h1>`;
     }
 
   renderElmento()

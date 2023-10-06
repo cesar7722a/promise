@@ -18,8 +18,8 @@ const ce = (el)=>document.createElement(el);
 function renderElmento(){
   ul.innerHTML=""
   array2.map((element)=>{
-
-     posicao = array.indexOf(element);
+  
+    posicao = array.indexOf(element);
 
     let li = ce("li");
     let img =ce("img");
@@ -31,6 +31,7 @@ function renderElmento(){
 
     li.addEventListener(`click`, ()=>{
       mostraMoodal ()
+      savePosicao() 
     })
     li.appendChild(img)
     li.appendChild(sectionId)
@@ -63,7 +64,8 @@ function mostraMoodal () {
   setTimeout(() => {
     document.querySelector('.modal').style.opacity = 1;
   }, 200);
-  savePosicao() 
+  console.log(posicao)
+  console.log(posicao)
 }
 
 function Cancel() {
@@ -86,7 +88,7 @@ document.querySelector(`.btn-sign-up`).addEventListener(`click`,()=>{
   let verifacar_Emai_Existencia = userCadastrados.findIndex((item) => item.email == valorEmali);
   let verifacar_password_Existencia = userCadastrados.findIndex((item)=> item.password == valorPassword)
     if(verifacar_Emai_Existencia >0 && verifacar_password_Existencia> 0){
-      window.location.replace("pageUserLogado.html");
+      window.location.replace("perfilUser.html");
     }else{
       alert("Dados incorretos")
     }

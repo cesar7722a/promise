@@ -1,0 +1,36 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter";
+  list-style: none;
+}
+body{
+  display: flex;
+  justify-content: center;
+}
+.card{
+  border: 1px solid #171736;
+  border-radius: 8px;
+  width: 40rem;
+  height: 25rem;
+  margin-top: 4rem;
+  padding-top: 1rem;
+  display: flex;
+  gap: 2rem;
+}
+.foto{
+  width: 15rem;
+  height: 15rem;
+  margin: 1rem;
+}
+img{
+  flex: 1;
+  border-radius: 8px;
+}
+section{
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 1rem;
+}

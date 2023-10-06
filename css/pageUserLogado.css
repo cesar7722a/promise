@@ -73,39 +73,3 @@ section{
   align-items: center;
   gap: .5rem;
 }
-.logadoimagem-user-mais{
-  height: 2rem;
-  display: flex;
-  width: 6rem;
-}
-/* .img-user-logado{
-
-} */
-.img-user-logado img{
-width: 2rem;
-height: 2rem;
-border-radius: 50%;
-}
-/* .mais-info-user-logado{
-
-} */
-span{
-  display: flex;
-  height: 2rem;
-  width: 2rem;
-  border: 1px solid red;
-}
-.mais-info-user-logado span::before{
-  content: "";
-  height: 10px;
-  position: absolute;
-  width: 10px;
-  background-color: black;
-}
-.mais-info-user-logado span::after{
-  content: "";
-  height: 10px;
-  position: absolute;
-  width: 10px;
-  background-color: black;
-}

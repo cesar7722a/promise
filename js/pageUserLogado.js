@@ -25,6 +25,7 @@ function renderElmento(){
     sectionNome.innerHTML=`Nome: <h1>${element.nome}</h1>`;
     sectionId.innerHTML=`Id: <h1>${element.id}</h1>`
 
+     li.addEventListener(`click`, ()=>{window.location.replace(`perfilUser.html`)});
     li.appendChild(img)
     li.appendChild(sectionId)
     li.appendChild(sectionNome);
@@ -48,7 +49,6 @@ renderElmento()
   renderElmento()
 });
 
-// Modal
 
 
 // var minhaPronise = function() {

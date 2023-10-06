@@ -1,7 +1,7 @@
 
 let ul = document.querySelector(`ul`);
 const ce = (el)=>document.createElement(el);
-
+let posicao
 
 // var minhaPronise = function() {
 //   return new Promise(function(resolve, reject){
@@ -47,6 +47,8 @@ minhaPronise()
 function renderElmento(){
   ul.innerHTML=""
    array.map((element)=>{
+
+     posicao = array.IndexOf(element)
     let li = ce("li");
     let img =ce("img");
     img.setAttribute(`src`,`${element.avatar_url}`)
@@ -55,7 +57,10 @@ function renderElmento(){
     sectionNome.innerHTML=`Nome: <h1>${element.login}</h1>`;
     sectionId.innerHTML=`Id: <h1>${element.id}</h1>`
 
-    li.addEventListener(`click`, ()=>{window.location.replace(`perfilUser.html`)});
+    li.addEventListener(`click`, ()=>{
+      savePosicao();
+      window.location.replace(`perfilUser.html`)
+    });
     li.appendChild(img)
     li.appendChild(sectionId)
     li.appendChild(sectionNome);
@@ -79,35 +84,6 @@ renderElmento()
   renderElmento()
 });
 
-  // function renderElmento(){
-  //   array.map((element)=>{
-  //     let li = ce("li");
-  //     let img =ce("img");
-  //     img.setAttribute(`src`,`${element.avatar_url}`)
-  //     let sectionNome = ce("section");
-  //     let sectionId = ce("section");
-  //     sectionNome.innerHTML=`Nome: <h1>${element.login}</h1>`;
-  //     sectionId.innerHTML=`Id: <h1>${element.id}</h1>`
-  //     li.appendChild(img)
-  //     li.appendChild(sectionId)
-  //     li.appendChild(sectionNome);
-  //     ul.appendChild(li)
-  //   });
-  // }
-  // renderElmento()
-  
-  /*area pesquisa*/
-//   inputPesquisa.addEventListener(`keyup`, (event) => {
-//     const search = event.target.value;
-//     const retorneArray = response.filter((element) => element.nome.toLowerCase().includes(search.toLowerCase()));
-//     if (search == "") {
-//         array = response;
-//     } else {
-//         array = retorneArray;
-//     }
-
-//   renderElmento()
-// });
  })
 
 .catch(function(error){
@@ -116,3 +92,6 @@ renderElmento()
   tratarErro.innerHTML=`<h1 id ="tratarErro">${error}</h1>`;
 })
 
+function savePosicao() {
+  localStorage.setItem(`posElementoGit`, JSON.stringify(posicao));
+}

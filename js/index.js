@@ -110,7 +110,7 @@ var minhaPronise = function() {
    
      let verifacar_Emai_Existencia = userCadastrados.findIndex((item) => item.email == valorEmali);
      let verifacar_password_Existencia = userCadastrados.findIndex((item)=> item.password == valorPassword)
-       if(verifacar_Emai_Existencia >0 && verifacar_password_Existencia> 0){
+       if(verifacar_Emai_Existencia > 0 && verifacar_password_Existencia > 0 ){
          window.location.replace("perfilUser.html");
        }else{
          alert("Dados incorretos")

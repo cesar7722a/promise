@@ -1,25 +1,8 @@
 
 let ul = document.querySelector(`ul`);
 const ce = (el)=>document.createElement(el);
-let posicao
 
-// var minhaPronise = function() {
-//   return new Promise(function(resolve, reject){
-//     var xhr = new XMLHttpRequest();
 
-//     xhr.open('get', 'https://api.github.com/users')
-//     xhr.send(null)
-//     xhr.onreadystatechange = function() {
-//       if(xhr.readyState === 4){ 
-//         if(xhr.status === 200) {
-//           resolve(JSON.parse(xhr.responseText))     
-//          } else {
-//         reject(`Dados Não Encontrados!`)
-//      }
-//     }
-//     }
-//    })  
-// }
 var minhaPronise = function() {
   return new Promise(function(resolve, reject){
     var xhr = new XMLHttpRequest();
@@ -48,7 +31,7 @@ function renderElmento(){
   ul.innerHTML=""
    array.map((element)=>{
 
-     posicao = array.IndexOf(element)
+    var posicao = array.indexOf(element);
     let li = ce("li");
     let img =ce("img");
     img.setAttribute(`src`,`${element.avatar_url}`)
@@ -58,7 +41,7 @@ function renderElmento(){
     sectionId.innerHTML=`Id: <h1>${element.id}</h1>`
 
     li.addEventListener(`click`, ()=>{
-      savePosicao();
+      savePosicao(posicao);
       window.location.replace(`perfilUser.html`)
     });
     li.appendChild(img)
@@ -92,6 +75,6 @@ renderElmento()
   tratarErro.innerHTML=`<h1 id ="tratarErro">${error}</h1>`;
 })
 
-function savePosicao() {
+function savePosicao(posicao) {
   localStorage.setItem(`posElementoGit`, JSON.stringify(posicao));
 }

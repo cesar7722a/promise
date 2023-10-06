@@ -46,7 +46,6 @@ function criarConta () {
      ul.innerHTML=""
      array.map((element)=>{
      
-       posicao = array.indexOf(element);
    
        let li = ce("li");
        let img =ce("img");
@@ -105,50 +104,6 @@ function criarConta () {
        }
    });
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- // function renderElmento(){
-   // array.map((element)=>{
-  //     let li = ce("li");
-  //     let img =ce("img");
-  //     img.setAttribute(`src`,`${element.avatar_url}`)
-  //     let sectionNome = ce("section");
-  //     let sectionId = ce("section");
-  //     sectionNome.innerHTML=`Nome: <h1>${element.login}</h1>`;
-  //     sectionId.innerHTML=`Id: <h1>${element.id}</h1>`
-  //     li.appendChild(img)
-  //     li.appendChild(sectionId)
-  //     li.appendChild(sectionNome);
-  //     ul.appendChild(li)
-  //   });
-  // }
-  // renderElmento()
-  
-  /*area pesquisa*/
-//   inputPesquisa.addEventListener(`keyup`, (event) => {
-//     const search = event.target.value;
-//     const retorneArray = response.filter((element) => element.nome.toLowerCase().includes(search.toLowerCase()));
-//     if (search == "") {
-//         array = response;
-//     } else {
-//         array = retorneArray;
-//     }
-
-//   renderElmento()
-// });
 })
 .catch(function(error){
   console.log(error)

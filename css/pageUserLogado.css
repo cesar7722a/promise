@@ -1,0 +1,111 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter";
+  list-style: none;
+}
+button{
+  background: #171736;
+  border: none;
+  height: 2.5rem;
+  width: 8rem;
+  border-radius: 8px;
+  color: #fff;
+  cursor: pointer;
+}
+button+button{
+  margin-left: 10px;
+}
+img{
+  height: auto;
+  width: 14rem;
+  border-radius: 8px;
+}
+header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 4rem;
+  height: 5rem;
+}
+header input{
+  border-radius: 8px;
+  outline: none;
+  padding: 0 8px;
+  width: 18rem;
+  height: 2.5rem;
+  border: 1px solid #171736;
+}
+.card{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 4rem 0;
+}
+h1#tratarErro{
+   font-size: 55px;
+}
+ul{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-left: 6rem;
+}
+li{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: .5rem;
+  border: 2px solid #171736;
+  width: 15rem;
+  height: 20rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  transition: .5s;
+}
+li:hover{
+  transform: scale(1.1);
+}
+section{
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+}
+.logadoimagem-user-mais{
+  height: 2rem;
+  display: flex;
+  width: 6rem;
+}
+/* .img-user-logado{
+
+} */
+.img-user-logado img{
+width: 2rem;
+height: 2rem;
+border-radius: 50%;
+}
+/* .mais-info-user-logado{
+
+} */
+span{
+  display: flex;
+  height: 2rem;
+  width: 2rem;
+  border: 1px solid red;
+}
+.mais-info-user-logado span::before{
+  content: "";
+  height: 10px;
+  position: absolute;
+  width: 10px;
+  background-color: black;
+}
+.mais-info-user-logado span::after{
+  content: "";
+  height: 10px;
+  position: absolute;
+  width: 10px;
+  background-color: black;
+}

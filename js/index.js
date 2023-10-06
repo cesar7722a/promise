@@ -70,7 +70,7 @@ function criarConta () {
      /*area pesquisa*/
      inputPesquisa.addEventListener(`keyup`, (event) => {
        const search = event.target.value;
-       const retorneArray = array.filter((element) => element.login.toLowerCase().includes(search.toLowerCase()));
+       const retorneArray = response.filter((element) => element.login.toLowerCase().includes(search.toLowerCase()));
        if (search == "" || search.trim()=="") {
            array = response;
        } else {
@@ -99,7 +99,7 @@ function criarConta () {
      let verifacar_Emai_Existencia = userCadastrados.findIndex((item) => item.email == valorEmali);
      let verifacar_password_Existencia = userCadastrados.findIndex((item)=> item.password == valorPassword)
        if(verifacar_Emai_Existencia > 0 && verifacar_password_Existencia > 0 ){
-         window.location.replace("perfilUser.html");
+         window.location.replace("pageUserLogado.html");
        }else{
          alert("Dados incorretos");
        }

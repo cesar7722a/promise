@@ -38,7 +38,7 @@ function criarConta () {
 
  minhaPronise()
  .then(function(response){
-
+  
   let array= response;
    console.log(array)
    

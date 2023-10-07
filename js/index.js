@@ -21,6 +21,16 @@ var minhaPronise = function() {
    })  
 }
 
+   // Modal
+   
+   function mostraMoodal () {
+    document.querySelector('.modal').style.opacity = 0;
+    document.querySelector(`.modal`).style.display = "flex";
+    setTimeout(() => {
+      document.querySelector('.modal').style.opacity = 1;
+    }, 200);
+  }
+
 function Cancel() {
   document.querySelector('.modal').style.opacity = 1;
   setTimeout(() => {
@@ -84,16 +94,6 @@ function criarConta () {
      renderElmento();
    });
    
-   // Modal
-   
-   function mostraMoodal () {
-     document.querySelector('.modal').style.opacity = 0;
-     document.querySelector(`.modal`).style.display = "flex";
-     setTimeout(() => {
-       document.querySelector('.modal').style.opacity = 1;
-     }, 200);
-   }
-
    document.querySelector(`.btn-sign-up`).addEventListener(`click`,()=>{
      let valorEmali =  document.querySelector(`#inputEmail`).value;
      let valorPassword = document.querySelector(`#inputPassword`).value;

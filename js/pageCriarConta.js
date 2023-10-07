@@ -1,5 +1,7 @@
 
 let contID = 3;
+var resultNome
+var resultPassword
 
 const userCadastrados = JSON.parse(localStorage.getItem(`user`)) || [];
 
@@ -8,14 +10,18 @@ function adicionarElemento(){
   let novoNome = document.querySelector(`#inputNome`).value;
   let novoEmali = document.querySelector(`#inputEmail`).value;
   let novaPassword = document.querySelector(`#inputPassword`).value;
+
+ if((novoNome !="" || novoNome.trim()!="") && (novoEmali != "" || novoEmali.trim()!="") && (novaPassword != "" || novaPassword.trim() != "") && resultNome != false && resultPassword != false){
   userCadastrados.push({ nome: novoNome, email:novoEmali, password:novaPassword, id: contID});
   novaPassword.value = "";
   novoEmali.value  ="";
   novoNome.value = "";
   saveUserCadastrado()
   window.location.replace("pageUserLogado.html");
-  console.log(userCadastrados)
-}
+ }else{
+  alert("Dados incorretos!");
+ }
+};
 
 document.querySelector(`.btn-voltar`).addEventListener(`click`,()=>{
   window.location.replace("index.html");
@@ -23,7 +29,7 @@ document.querySelector(`.btn-voltar`).addEventListener(`click`,()=>{
 
 function validarUser(){
   let novoNome = document.querySelector(`#inputNome`).value;
-  var resultNome = validarNome(novoNome);
+   resultNome = validarNome(novoNome);
   if(resultNome) {
     document.querySelector(`#inputNome`).setAttribute(`class`,`userDadosCorretos`);
   } else {
@@ -33,7 +39,7 @@ function validarUser(){
 
 function validarUserPass(){
   let novaPassword = document.querySelector(`#inputPassword`).value;
-  var resultPassword = validarPassword(novaPassword)
+   resultPassword = validarPassword(novaPassword)
    if(resultPassword) {
     document.querySelector(`#inputPassword`).setAttribute(`class`,`userDadosCorretos`);                    
    } else{

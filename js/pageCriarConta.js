@@ -13,6 +13,7 @@ function adicionarElemento(){
 
  if((novoNome !="" || novoNome.trim()!="") && (novoEmali != "" || novoEmali.trim()!="") && (novaPassword != "" || novaPassword.trim() != "") && resultNome != false && resultPassword != false){
   userCadastrados.push({ nome: novoNome, email:novoEmali, password:novaPassword, id: contID});
+  savePrimeiraLetraUserLogado(novoEmali.slice(0,1));
   novaPassword.value = "";
   novoEmali.value  ="";
   novoNome.value = "";
@@ -56,4 +57,8 @@ function validarPassword(password){
 
 function saveUserCadastrado() {
   localStorage.setItem(`user`, JSON.stringify(userCadastrados));
+}
+
+function savePrimeiraLetraUserLogado(priLetra) {
+  localStorage.setItem(`userParaLogar`, JSON.stringify(priLetra));
 }

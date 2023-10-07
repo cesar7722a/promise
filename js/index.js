@@ -30,6 +30,9 @@ function Cancel() {
   document.querySelector(`#inputEmail`).value = "";
   document.querySelector(`#inputPassword`).value = "";
 };
+function savePrimeiraLetraUserLogado(priLetra) {
+  localStorage.setItem(`letra`, JSON.stringify(priLetra));
+}
    
 function criarConta () {
   window.location.replace("pageCriarConta.html");

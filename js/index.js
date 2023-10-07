@@ -101,6 +101,7 @@ function criarConta () {
      let verifacar_Emai_Existencia = userCadastrados.findIndex((item) => item.email == valorEmali);
      let verifacar_password_Existencia = userCadastrados.findIndex((item)=> item.password == valorPassword)
        if(verifacar_Emai_Existencia > 0 && verifacar_password_Existencia > 0 ){
+        savePrimeiraLetraUserLogado(userCadastrados[verifacar_Emai_Existencia].nome.slice(0,1));
          window.location.replace("pageUserLogado.html");
        }else{
          alert("Dados incorretos");

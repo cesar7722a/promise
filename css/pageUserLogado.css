@@ -37,6 +37,18 @@ header input{
   height: 2.5rem;
   border: 1px solid #171736;
 }
+.infoUserLogado{
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #171736;
+  color: #fff;
+  border-radius: 50%;
+  cursor: default;
+}
+
 .card{
   display: flex;
   justify-content: center;

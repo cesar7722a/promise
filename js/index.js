@@ -7,8 +7,8 @@ var minhaPronise = function() {
   return new Promise(function(resolve, reject){
     var xhr = new XMLHttpRequest();
 
-    xhr.open('get', 'https://api.github.com/users')
-    xhr.send(null)
+    xhr.open('get', 'https://api.github.com/users');
+    xhr.send(null);
     xhr.onreadystatechange = function() {
       if(xhr.readyState === 4){ 
         if(xhr.status === 200) {

@@ -15,7 +15,7 @@
       <form action="">
         <label for="inputNome">
           Nome<br>
-          <input type="text" placeholder="Digete O Nome" id="inputNome">
+          <input type="text" placeholder="Digete O Nome" id="inputNome" onkeyup="validarUser()">
         </label>
         <label for="inputEmail">
           Email<br>
@@ -23,7 +23,7 @@
         </label>
         <label for="inputPassword">
           Password<br>
-          <input type="password" placeholder="Digete uma password forte" id="inputPassword">
+          <input type="password" placeholder="Digete uma password forte" id="inputPassword" onkeyup="validarUserPass()">
         </label>
       </form>
       <div class="btn-criar-cancel">

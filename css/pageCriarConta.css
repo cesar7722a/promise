@@ -70,3 +70,9 @@ margin-top: .5rem;
   border: 1px solid #171736;
   color: #000;
 }
+.userDadosErrado{
+  border: 3px solid red;
+}
+.userDadosCorretos{
+  border: 3px solid green;
+}

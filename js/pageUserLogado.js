@@ -1,6 +1,8 @@
 
 let ul = document.querySelector(`ul`);
 const ce = (el)=>document.createElement(el);
+const userCadastrados = JSON.parse(localStorage.getItem(`user`)) || [];
+document.querySelector(`.infoUserLogado`).innerHTML=`<span>${JSON.parse(localStorage.getItem(`letra`)).toUpperCase()}</span>`
 
 
 var minhaPronise = function() {

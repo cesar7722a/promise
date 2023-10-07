@@ -106,7 +106,6 @@ function criarConta () {
 
 })
 .catch(function(error){
-  console.log(error)
   let tratarErro = document.querySelector(`.card`);
   tratarErro.innerHTML=`<h1 id ="tratarErro">${error}</h1>`;
 })

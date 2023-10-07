@@ -9,6 +9,23 @@ body{
   display: flex;
   justify-content: center;
 }
+main{
+  display: flex;
+  gap: 1rem;
+}
+button{
+  margin-top: 4rem;
+  height: 3rem;
+  width: 3rem;
+  padding: 10px;
+  border-radius: 8px;
+  background: #171736;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
 .card{
   border: 1px solid #171736;
   border-radius: 8px;
@@ -17,16 +34,19 @@ body{
   margin-top: 4rem;
   padding-top: 1rem;
   display: flex;
-  gap: 2rem;
+  gap: 8rem;
 }
 .foto{
-  width: 15rem;
-  height: 15rem;
+  width: 10rem;
+  height: 10rem;
   margin: 1rem;
 }
 img{
-  flex: 1;
   border-radius: 8px;
+  width: 18rem;
+}
+.infoUser{
+  margin-top: 2rem;
 }
 section{
   display: flex;

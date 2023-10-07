@@ -1,11 +1,6 @@
 
 let contID = 3;
-// const userCadastrados = [
-//   {nome:"Franciso", email:"francisco@gmail.com",password:"123fra" , id:0},
-//   {nome:"Ana", email:"ana@gmail.com",password:"123ana", id:1},
-//   {nome:"Pedro", email:"pedro@gmail.com",password:"123ped", id:2 },
-//   {nome:"Petra", email:"petra@gmail.com",password:"123pet", id:3}
-// ]
+
 const userCadastrados = JSON.parse(localStorage.getItem(`user`)) || [];
 
 function adicionarElemento(){
@@ -18,13 +13,13 @@ function adicionarElemento(){
   novoEmali.value  ="";
   novoNome.value = "";
   saveUserCadastrado()
+  window.location.replace("pageUserLogado.html");
   console.log(userCadastrados)
 }
 
 document.querySelector(`.btn-voltar`).addEventListener(`click`,()=>{
   window.location.replace("index.html");
 });
-
 function saveUserCadastrado() {
   localStorage.setItem(`user`, JSON.stringify(userCadastrados));
 }

@@ -53,7 +53,6 @@ function criarConta () {
  .then(function(response){
   
   let array= response;
-   console.log(array)
    
    function renderElmento(){
      ul.innerHTML=""
